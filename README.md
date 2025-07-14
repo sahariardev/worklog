@@ -33,7 +33,8 @@ A clean and focused desktop app built with **React** + **Wails (Golang)** to hel
 
 ```bash
 go install github.com/wailsapp/wails/v2/cmd/wails@latest
-
+git clone https://github.com/sahariardev/worklog
+cd worklog
 wails dev     # Start in development mode
 wails build   # Build a native desktop binary
 ```
