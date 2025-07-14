@@ -1,19 +1,39 @@
-# README
+# 🕒 Worklog
 
-## About
+A clean and focused desktop app built with **React** + **Wails (Golang)** to help you track task sessions, checkpoints, and reflect on your work — no external database required.
 
-This is the official Wails React template.
+---
 
-You can configure the project by editing `wails.json`. More information about the project settings can be found
-here: https://wails.io/docs/reference/project-config
+## 🚀 Features
 
-## Live Development
+- ✅ Start, pause, resume, and finish tasks
+- 🧠 Write notes and document lessons learned
+- 🔖 Add/edit/delete **checkpoints** with optional notes
+- ✅ Click to mark checkpoints as completed
+- ⏱ See real-time clock, date, and worked minutes
+- 📊 Auto-generated task summary with all details
 
-To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
-server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
-and have access to your Go methods, there is also a dev server that runs on http://localhost:34115. Connect
-to this in your browser, and you can call your Go code from devtools.
+---
 
-## Building
+## ⚙️ Built With
 
-To build a redistributable, production mode package, use `wails build`.
+- [React](https://reactjs.org/) — UI logic
+- [Wails](https://wails.io/) — Golang-powered desktop shell
+- Inline CSS — Minimal, modern look
+
+---
+
+## 🔧 Setup & Build Instructions
+
+### 1. Install Prerequisites
+
+- [Go](https://golang.org/dl/) 1.21+
+- [Node.js](https://nodejs.org/) 16+
+- Wails CLI:
+
+```bash
+go install github.com/wailsapp/wails/v2/cmd/wails@latest
+
+wails dev     # Start in development mode
+wails build   # Build a native desktop binary
+```
