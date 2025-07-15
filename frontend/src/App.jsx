@@ -125,6 +125,26 @@ const App = () => {
         );
     };
 
+    const copyToClipBoard = async () => {
+        let checkPoints = summaryDetails.checkpoints.map( (cp, i) => {
+            return `${cp.title}: ${cp.note} ${cp.done ? '(Done)' : ''}`;
+        }).join('\n');
+
+        const value = `
+Task Name: ${summaryDetails.taskName}
+Started At: ${summaryDetails.startTime}
+Ended At: ${summaryDetails.endTime}
+Time Worked: ${summaryDetails.finalWorkedMinutes}
+Paused Time: ${summaryDetails.pausedMinutes}
+
+Notes: ${summaryDetails.notes}
+Lessons: ${summaryDetails.lessons}
+Check Points:
+${checkPoints}
+        `
+        await navigator.clipboard.writeText(value);
+    }
+
     return (
         <div style={{
             maxWidth: '400px',
@@ -249,6 +269,7 @@ const App = () => {
                         ))}
                     </ul>
                     <button onClick={() => setSummaryModal(false)}>Close</button>
+                    <button onClick={() => copyToClipBoard()}>Copy</button>
                 </div>
             )}
         </div>
